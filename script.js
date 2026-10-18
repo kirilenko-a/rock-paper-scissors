@@ -3,10 +3,11 @@ const getComputerChoice = () => {
 
   const getRandomInt  = (max) => Math.floor(Math.random() * max);
 
-  return variants[getRandomInt(3)];
+  const computerChoice = variants[getRandomInt(3)];
+
+  return computerChoice;
 }
 
-const computerSelection = getComputerChoice();
 
 const getHumanChoice = () => {
   const humanChoice = prompt('Make your choise(rock, paper or scissors)');
@@ -14,12 +15,27 @@ const getHumanChoice = () => {
   return humanChoice.toLowerCase();
 }
 
-const humanSelection = getHumanChoice();
 
 let humanScore = 0;
 let computerScore = 0;
+const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
 
 const playRound = (humanChoice, computerChoice) => {
-  
+  if (humanChoice === computerChoice) {
+    console.log('Draw!');
+  } else if (humanChoice === 'rock' && computerChoice === 'scissors' || humanChoice === 'paper' && computerChoice === 'rock' || humanChoice === 'scissors' && computerChoice === 'paper') {
+    console.log('You win!');
+    humanScore++;
+  } else {
+    console.log('Computer wins!');
+    computerScore++;
+  }
 }
 
+
+console.log(`Your choice - ${humanSelection}`);
+console.log(`Computer choice - ${computerSelection}`);
+const roundResult = playRound(humanSelection, computerSelection);
+console.log(roundResult);
+console.log(`You ${humanScore} : ${computerScore} Computer`);
