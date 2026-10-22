@@ -132,14 +132,26 @@ body {
         background-color: #39272F;
       }
 
+      .rock-btn:hover {
+        transform: scale(1.1);
+      }
+
       .paper-btn {
         border: 3px solid #6CB9FF;
         background-color: #1D304C;
       }
 
+      .paper-btn:hover {
+        transform: scale(1.1);
+      }
+
       .scissors-btn {
         border: 3px solid #66DDA6;
         background-color: #1B3B34;
+      }
+
+      .scissors-btn:hover {
+        transform: scale(1.1);
       }
     }
   }
@@ -171,5 +183,9 @@ body {
       border-radius: 10px;
       background-color: #202B3D;
       cursor: pointer;
+    }
+
+    .reset-btn:hover {
+      transform: scale(1.1);
     }
   }
