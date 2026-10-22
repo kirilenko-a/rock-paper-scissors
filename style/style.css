@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  
+  background-color: #151D2B;
+}
+
+.container {
+  padding: 30px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  .title {
+    font-size: 64px;
+
+    .rock {
+      color: #FF7779;
+    }
+
+    .paper {
+      color: #6CB9FF;
+    }
+
+    .scissors {
+      color: #66DDA6;
+    }
+  }
+
+  .description {
+    font-size: 24px;
+    color: #9CA9BF;
+  }
+}
+
+.game-field {
+  .scoreboard {
+    display: flex;
+    gap: 60px;
+
+    .score {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 500px;
+      padding: 30px 0;
+      border: 2px solid #34435E;
+      border-radius: 10px;
+      background-color: #202B3D;
+
+      .player-score,
+      .computer-score {
+        font-size: 24px;
+        color: #D7E1F5;
+      }
+
+      .player-score-counter,
+      .computer-score-counter {
+        font-size: 64px;
+        font-weight: bold;
+      }
+
+      .player-score-counter {
+        color: #FF7779;
+      }
+
+      .computer-score-counter {
+        color: #6CB9FF;
+      }
+    }
+  }
+}

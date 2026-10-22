@@ -3,9 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="/style/style.css">
+  <title>Rock, paper, scissors</title>
 </head>
 <body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">
+        <span class="rock">Rock</span>
+
+        <span class="paper">Paper</span>
+        
+        <span class="scissors">Scissors</span>
+      </h1>
+
+      <p class="description">Play against the computer and see who wins!</p>
+    </header>
+
+    <main class="game-field">
+      <div class="scoreboard">
+        <div class="score">
+          <p class="player-score">Your score</p>
+
+          <p class="player-score-counter">0</p>
+        </div>
+
+        <div class="score">
+          <p class="computer-score">Computer score</p>
+
+          <p class="computer-score-counter">0</p>
+        </div>
+      </div>
+    </main>
+  </div>
   
   <script src="/script.js"></script>
 </body>
